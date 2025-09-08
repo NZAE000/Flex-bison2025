@@ -1,0 +1,4 @@
+flex/exec
+flex/calcu/exec
+flex/*.o
+flex/calcu/*.o
