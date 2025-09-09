@@ -11,14 +11,17 @@
     uint32_t n_others {};
 %}
 
+/* Token detection rules (RE) */
 
-/* Token detetion rules (RE) */
+word [a-zA-Z_][a-zA-Z0-9_]*
+number [0-9]+"."[0-9]+|[0-9]+
+
 %%
-[a-zA-Z_][a-zA-Z0-9_]*      { ++n_words;   n_chars += yyleng; }
-[0-9]+"."[0-9]+|[0-9]+      { ++n_numbers; n_chars += yyleng; }
-[\n]                        { ++n_lines;  ++n_chars; }
-[ \t]                       { ++n_spaces; ++n_chars; }
-.                           { ++n_others; ++n_chars; }              /*other*/
+{word}      { ++n_words;   n_chars += yyleng; }
+{number}    { ++n_numbers; n_chars += yyleng; }
+[\n]        { ++n_lines;  ++n_chars; }
+[ \t]       { ++n_spaces; ++n_chars; }
+.           { ++n_others; ++n_chars; }              /*other*/
 %%
 
 /* Functions */

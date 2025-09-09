@@ -538,7 +538,7 @@ YY_DECL
 		}
 
 	{
-#line 16 "wordcountv1.l"
+#line 19 "wordcountv1.l"
 
 #line 543 "lex.yy.cc"
 
@@ -599,33 +599,33 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 17 "wordcountv1.l"
+#line 20 "wordcountv1.l"
 { ++n_words;   n_chars += yyleng; }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 18 "wordcountv1.l"
+#line 21 "wordcountv1.l"
 { ++n_numbers; n_chars += yyleng; }
 	YY_BREAK
 case 3:
 /* rule 3 can match eol */
 YY_RULE_SETUP
-#line 19 "wordcountv1.l"
+#line 22 "wordcountv1.l"
 { ++n_lines;  ++n_chars; }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 20 "wordcountv1.l"
+#line 23 "wordcountv1.l"
 { ++n_spaces; ++n_chars; }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 21 "wordcountv1.l"
+#line 24 "wordcountv1.l"
 { ++n_others; ++n_chars; }              /*other*/
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 22 "wordcountv1.l"
+#line 25 "wordcountv1.l"
 ECHO;
 	YY_BREAK
 #line 631 "lex.yy.cc"
@@ -1591,7 +1591,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 22 "wordcountv1.l"
+#line 25 "wordcountv1.l"
 
 
 /* Functions */

@@ -20,14 +20,14 @@
 /* Tokens rules (RE)*/
 
 %%
+[0-9]+      { yval = atoi(yytext); return NUMBER; }
 "+"         { return SUM; }
 "-"         { return SUB; }
 "*"         { return MULT; }
 "/"         { return DIV; }
 "|"         { return ABS; }
 "\n"        { return ENDLINE; }
-[ \t]+      {  }
-[0-9]+      { yval = atoi(yytext); return NUMBER; }
+[ \t]+      {}
 .           {}
 %%
 
@@ -48,7 +48,7 @@ main(void)
         else if (token == ENDLINE){
             std::cout<<"endline\n";
         }
-        else { // En C++ el lexema actual se obtiene con YYText()
+        else { // In C++ the current lexeme is obtained with YYText().
             std::cout<<"operator: "<<scanner->YYText() <<'\n';
         }
     }
