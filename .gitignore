@@ -4,3 +4,4 @@ flex/*.o
 flex/calcu/*.o
 flex/draw-robot/*.o
 flex/draw-robot/exec
+bison/calcu/exec
